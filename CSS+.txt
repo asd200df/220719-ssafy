@@ -1,0 +1,191 @@
+CSS
+
+# 박스 쉐도우 (중요)
+교안 111page
+
+.box{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black; 
+    box-shadow: 12px 12px 2px blue;
+    // 앞에 12 2개는 우측 아래, -12는 반대, 뒤에 2는 블러처리, 그 뒤는 색상 
+}
+
+# tag 마다 default 값이 다름 
+
+# 줄 바꿈 일어나지 않으면( +크기 조정이 안된다 )  >> inline
+a, span, margin tag는 inline임
+
+# Alt + 마우스 클릭 
+커서 여러개 찍을 수 있음
+
+
+# Case
+camelCase (JS default)
+kebab-case (HTML default)
+snake_case
+
+
+# class 묶어서 한 번에 정의
+.ex1, .ex2 { border: 1px solid blueviolet; }
+
+
+# 월말 평가
+JS 안나옴 CSS까지 나옴
+
+# 마진, 패딩
+[ 마진 ㅣ패딩 ㅁ 패딩 ㅣ 마진 ]
+
+# display 
+display 사용하면 inline도 바꿀 수 있음
+.ex{ display: block; }  // inline-block
+display: none;  // 사라짐(감춰 놓은 것, tag가 아예 없어진 건 아님)
+
+# <div> 
+한 줄 전체를 차지함 & block 유형
+
+# <span>
+inline 유형
+
+# id & class
+id 중복 안됨 class는 중복 됨 
+그래서 class 쓰는거야 묶을라고
+
+# 가로 세로
+가로 row 행
+세로 column 렬
+
+
+# <flex> 정리
+목적 : 정렬하려고 (부모가 class / 자식이 item)
+
+display: flex;
+flex-direction: column;  // 세로
+flex-direction: row;  // 가로 (default 값)
+flex-direction: column-reverse;  // 역순 세로
+flex-direction: row-reverse;  // 역순 가로
+flex-direction: reverse;  // 역순
+align-items: center;  // 가운데 배치
+
+// 아래 두개 같이 쓰면 화면 정중앙에 배치 된다
+align-items: center;
+justify-content: center;
+
+// 비율 1:2:3
+flex: 1; flex: 2; flex: 3;
+
+flex-direction:
+	옵션들
+	row		요소들을 row 로 정렬
+	column		요소들을 column 으로 정렬
+	row-reverse	row의 반대, 즉 오른쪽에서 왼쪽으로 정렬
+	column-reverse	column의 반대, 즉 위에서 아래로 정렬
+align-items: 
+	옵션들
+	center 		요소들을 컨테이너의 세로선 상의 가운데로 정렬
+	flex-start		요소들을 컨테이너의 꼭대기로 정렬	
+	flex-end		요소들을 컨테이너의 바닥으로 정렬
+	baseline		요소들을 컨테이너의 시작위치에 정렬
+	stretch		요소들을 컨테이너에 맞도록 늘림
+justify-content:
+	옵션들
+	flex-start		기본값. 요소들을 컨테이너의 왼쪽으로 정렬
+	flex-end		요소들을 컨테이너의 오른쪽으로 정렬
+	center		요소들을 컨테이너의 가운데로 정렬
+	space-around	요소들 "주위"에 동일한 간격을 둠
+	space-between	요소들 "사이에" 동일한 간격을 둠
+
+# lorem
+<div>lorem</div>
+의미 없는 글자 채우기
+
+# fixed
+position: fixed;
+독자적으로 움직이게 하는 ? ㅇㅅㅇ;;
+스크롤 내릴 때 자리 고정되어 있어서 같이 내려옴 
+
+
+# 
+.ex {	
+	position: static;  // 고정 (default)
+	position: relative;  // 부모 클래스 기준으로(상대적인)
+	position: absolute;  // static이 아닌 부모가 기준으로 움직이는 거 
+	left: 100px;  // 왼쪽에 100px만큼 빈 칸을 채워 넣으세용 (top, right, bottom)
+}
+
+
+# 부모 클래스(relative(static이면 안됨)) 기준으로 자식(absolute) 위치 정함
+    .parent{
+      width: 500px;
+      height: 500px;
+      background-color: blue;
+      position: relative;
+    }
+    .child{
+      /* width: 50px; */
+      /* height: 50px; */
+      background-color: white;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+
+
+# z-index
+우선순위 정해주는 거
+.ex1 { z-index: 1; }  // 1이 먼저 실행
+.ex2 { z-index: 2; }  // 그 다음 숫자가 실행 되겠지
+
+
+# git hub 하는 법
+
+https://chocolatey.org/install
+
+링크 카피
+
+power shell에서 붙여넣기 하면 다운됨
+
+choco install git
+
+a
+
+exit
+
+재접속
+
+vscode도 재접속
+
+작업한 것들 있는 곳에서 여기서 열기 (vscode)
+
+터미널 열기 Ctrl + ~
+
+git init
+
+git config --global user.name "내 아이디"
+
+git config --global user.email "내 이메일"
+
+git add -A
+
+commit
+
+git hub 사이트 접속
+
+new repository 만듥기
+
+git remote add origin 만든 주소 적고
+
+git push -u origin master
+
+다시 불러오기
+
+Shift + 우클릭 
+
+여기에 Power Shell 열기
+
+git hub에 불러올 파일 주소 복사
+
+git clone 여기다 붙여넣기
+
+
+

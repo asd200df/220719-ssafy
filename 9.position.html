@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .grand, .parent, .child{
+      border: 1px solid black;
+      /* position: static; */
+    }
+    .grand{
+
+    }
+    .parent{
+      position: relative;
+    }
+    .child{
+      
+      position: absolute;
+      top: 0px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="grand">
+    조부모
+    <div class="parent">
+      부모
+      <div class="child">
+        자식
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
